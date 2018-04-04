@@ -17,4 +17,7 @@ sxu-double-graduate
 2018/4/3
 
 - 今天要把昨天的那个bug搞明白
+
+*的确是需要把async和await是针对coroutine的新语法，要使用新的语法，只需要做两步简单的替换：把@asyncio.coroutine替换为async；把yield from替换为await。我在这里把所有的async换成了@asyncio.coroutine，这样才能与yield from匹配，不会报错。*
+
 - 研究一下怎么把.csv文件中的数据添加到数据库里面
