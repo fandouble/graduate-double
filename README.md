@@ -18,6 +18,8 @@ sxu-double-graduate
 
 - 今天要把昨天的那个bug搞明白
 
-*的确是需要把async和await是针对coroutine的新语法，要使用新的语法，只需要做两步简单的替换：把@asyncio.coroutine替换为async；把yield from替换为await。我在这里把所有的async换成了@asyncio.coroutine，这样才能与yield from匹配，不会报错。*
+*1.的确是需要把async和await是针对coroutine的新语法，要使用新的语法，只需要做两步简单的替换：把@asyncio.coroutine替换为async；把yield from替换为await。我在这里把所有的async换成了@asyncio.coroutine，这样才能与yield from匹配，不会报错。*
+
+*2.另一个注意事项，关于pool：务必关闭mysql连接池，否则loop会出现问题可参考*[链接](https://www.liaoxuefeng.com/discuss/001409195742008d822b26cf3de46aea14f2b7378a1ba91000/00144895868963235119c7b5ff74352abef9a0aad0838d1000?page=1)
 
 - 研究一下怎么把.csv文件中的数据添加到数据库里面
